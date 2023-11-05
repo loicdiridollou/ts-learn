@@ -1,3 +1,4 @@
+/* eslint @typescript-eslint/no-var-requires: "off" */
 import credsJson from "./creds.json";
 
 console.log(credsJson);
