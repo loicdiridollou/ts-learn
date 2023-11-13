@@ -1,4 +1,4 @@
-function addNumbers(x: number, y: number) {
+export function addNumbers(x: number, y: number) {
   return x + y;
 }
 
