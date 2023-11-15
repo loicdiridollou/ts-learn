@@ -5,8 +5,8 @@ import { NewCar } from "./unit07";
 class ElectricCar extends NewCar {
   // Properties
   private _range: number; // Properties unique to ElectricCar
+
   // Constructor
-  /// Constructor
   constructor(make: string, color: string, range: number, doors = 2) {
     super(make, color, doors);
     this._range = range;

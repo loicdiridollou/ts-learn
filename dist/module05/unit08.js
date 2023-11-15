@@ -4,7 +4,6 @@ const unit07_1 = require("./unit07");
 // extending a class with inheritance
 class ElectricCar extends unit07_1.NewCar {
     // Constructor
-    /// Constructor
     constructor(make, color, range, doors = 2) {
         super(make, color, doors);
         this._range = range;
@@ -16,7 +15,7 @@ class ElectricCar extends unit07_1.NewCar {
     }
     // Overrides the brake method of the Car class
     brake() {
-        return `${this.worker()}  is braking with the regenerative braking system.`;
+        return `${this.worker()} is braking with the regenerative braking system.`;
     }
     // This function performs work for the other method functions
     worker() {
