@@ -19,3 +19,5 @@ class Car {
         return `Turning ${direction}`;
     }
 }
+let newCar = new Car("test", "test color", 2);
+console.log(newCar.make);
