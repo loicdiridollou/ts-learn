@@ -13,6 +13,7 @@ stringArray.push(30); // OK
 console.log(numberArray); // [5, 10, 15, 20, 25, "This is not a number"]
 console.log(stringArray); // ["Cats", "Dogs", "Birds", "Rabbits", 30]
 
+// with a single type
 function getArrayTyped<T>(items: T[]): T[] {
   return new Array().concat(items);
 }
@@ -25,3 +26,22 @@ stringArrayTyped.push("Rabbits"); // OK
 // stringArrayTyped.push(30); // OK
 console.log(numberArrayTyped); // [5, 10, 15, 20, 25, "This is not a number"]
 console.log(stringArrayTyped); // ["Cats", "Dogs", "Birds", "Rabbits", 30]
+
+// with multiple types
+function identity<T, U>(value: T, message: U): T {
+  console.log(message);
+  return value;
+}
+
+let returnNumber = identity<number, string>(100, "Hello!");
+let returnString = identity<string, string>("100", "Hola!");
+let returnBoolean = identity<boolean, string>(true, "Bonjour!");
+
+console.log(typeof returnNumber);
+console.log(typeof returnString);
+console.log(typeof returnBoolean);
+
+returnNumber = returnNumber * 100; // OK
+console.log(returnNumber);
+// returnString = returnString * 100; // Error: Type 'number' not assignable to type 'string'
+// returnBoolean = returnBoolean * 100; // Error: Type 'number' not assignable to type 'boolean'
