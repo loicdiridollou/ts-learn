@@ -28,8 +28,8 @@ exports.NewCar = NewCar;
 // Properties
 NewCar.numberOfCars = 0; // New static property
 function main() {
-    new NewCar("make1", "color1", 2);
-    new NewCar("make2", "color2", 4);
+    let _c = new NewCar("make2", "color2", 4);
+    let _d = new NewCar("make2", "color2", 4);
     console.log(NewCar.getNumberOfCars());
 }
 if (require.main === module) {

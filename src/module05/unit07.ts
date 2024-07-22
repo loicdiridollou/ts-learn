@@ -31,7 +31,8 @@ export class NewCar {
 }
 
 function main() {
-  new NewCar("make2", "color2", 4);
+  let _c = new NewCar("make2", "color2", 4);
+  let _d = new NewCar("make2", "color2", 4);
 
   console.log(NewCar.getNumberOfCars());
 }
